@@ -109,8 +109,8 @@ int main(int argc, char* argv[]) {
         printf("IP Header: %s -> ", inet_ntoa(ip->ip_src));
         printf("%s\n", inet_ntoa(ip->ip_dst));
 
-        printf("TCP Header: %x -> ", tcp->th_sport);
-        printf("%x\n", tcp->th_dport);
+        printf("TCP Header: %x -> ", ntohs(tcp->th_sport));
+        printf("%x\n", ntohs(tcp->th_dport));
 
         payload = (char *)(packet + SIZE_ETHERNET + size_ip + size_tcp);
 
