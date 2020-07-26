@@ -1,6 +1,6 @@
-test: main.o
-	gcc -o test main.cpp -lpcap
+pcap-test: main.o
+	gcc -o pcap-test main.cpp -lpcap
 
 clean:
-	rm *.o pcap-test
+	rm -rf *.o 
 
