@@ -106,8 +106,8 @@ int main(int argc, char* argv[]) {
         printf("%x:%x:%x:%x:%x:%x\n", ethernet->ether_dhost[0], ethernet->ether_dhost[1], ethernet->ether_dhost[2], ethernet->ether_dhost[3], ethernet->ether_dhost[4], ethernet->ether_dhost[5]);
 
 
-        printf("IP Header: %x -> ", ip->ip_src);
-        printf("%x\n", ip->ip_dst);
+        printf("IP Header: %s -> ", inet_ntoa(ip->ip_src));
+        printf("%s\n", inet_ntoa(ip->ip_dst));
 
         printf("TCP Header: %x -> ", tcp->th_sport);
         printf("%x\n", tcp->th_dport);
